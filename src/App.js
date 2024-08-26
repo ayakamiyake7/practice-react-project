@@ -12,18 +12,6 @@ import { HeaderOnly } from "./components/templates/HeaderOnly";
 // import { ChildArea } from "./ChildArea";
 import { Router } from "./router/Router";
 
-const user = {
-  name: "jakee",
-  image:
-    "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  email: "hello@gmail.com",
-  phone: "090-0000-0000",
-  company: {
-    name: "テスト株式会社",
-  },
-  website: "https://aaa.com",
-};
-
 export default function App() {
   // const [count, setCount] = useState(0);
   // const [text, setText] = useState("");
@@ -40,21 +28,5 @@ export default function App() {
   // const temp = useMemo(() => 1 + 3, []);
   // console.log(temp);
 
-  return (
-    <BrowserRouter>
-      <DefaultLayout>
-        {/* <Link to="/">Home</Link>
-        <br />
-        <Link to="/page1">Page1</Link>
-        <br />
-        <Link to="/page2">Page2</Link> */}
-        <PrimaryButton>Test</PrimaryButton>
-        <SecondaryButton>Test</SecondaryButton>
-        <br />
-        <SearchInput />
-        <UserCard user={user} />
-      </DefaultLayout>
-      <Router />
-    </BrowserRouter>
-  );
+  return <Router />;
 }
